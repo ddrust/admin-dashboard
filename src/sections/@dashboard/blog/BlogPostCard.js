@@ -62,9 +62,9 @@ export default function BlogPostCard({ post, index }) {
   const latestPost = index === 1 || index === 2;
 
   const POST_INFO = [
-    { number: comment, icon: 'eva:message-circle-fill' },
-    { number: view, icon: 'eva:eye-fill' },
-    { number: share, icon: 'eva:share-fill' },
+    { number: comment, icon: 'mdi-light:message' },
+    { number: view, icon: 'mdi-light:eye' },
+    { number: share, icon: 'mdi:share' },
   ];
 
   return (

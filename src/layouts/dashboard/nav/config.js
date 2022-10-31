@@ -9,27 +9,27 @@ const navConfig = [
   {
     title: 'dashboard',
     path: '/dashboard/app',
-    icon: icon('ic_analytics'),
+    icon: 'mdi-light:home',
   },
   {
     title: 'user',
     path: '/dashboard/user',
-    icon: icon('ic_user'),
+    icon: 'mdi-light:user',
   },
   {
     title: 'product',
     path: '/dashboard/products',
-    icon: icon('ic_cart'),
+    icon: 'mdi-light:cart',
   },
   {
     title: 'blog',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: 'mdi-light:blog',
   },
   {
     title: 'login',
     path: '/login',
-    icon: icon('ic_lock'),
+    icon: 'mdi-light:lock',
   },
   {
     title: 'Not found',
