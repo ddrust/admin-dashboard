@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { NavLink as RouterLink } from 'react-router-dom';
 // @mui
-import { Box, Toolbar, ListItemText } from '@mui/material';
+import { Box, List, ListItemText, Toolbar } from '@mui/material';
 import Iconify from '../iconify';
 import Logo from '../logo';
 //
@@ -13,15 +13,23 @@ NavSection.propTypes = {
   data: PropTypes.array,
 };
 
-export default function NavSection({ data = [], ...other }) {
+export default function NavSection({ data = [], isDesktop, ...other }) {
   return (
     <Box {...other}>
-        <Toolbar >
-          <Logo />
+      {!isDesktop ? 
+        <List direction="row" disablePadding sx={{ p: 1 }}>
+            {data.map((item) => (
+              <NavItem key={item.title} item={item} />
+            ))}
+        </List> : (
+        <Toolbar>
           {data.map((item) => (
             <NavItem key={item.title} item={item} />
           ))}
         </Toolbar>
+        )
+      }
+      
      </Box>
      
   );
@@ -45,11 +53,13 @@ function NavItem({ item }) {
           color: 'text.primary',
           bgcolor: 'action.selected',
           fontWeight: 'fontWeightBold',
+          // borderColor: "red",
+          // borderWidth: 2
         },
       }}
     >
-      {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
-      <Iconify icon={icon} sx={{ width: 35, height: 35, mr: 0.5 }} />
+      <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
+      {/* <Iconify icon={icon} sx={{ width: 35, height: 35, mr: 0.5 }} /> */}
 
       <ListItemText disableTypography primary={title} />
 

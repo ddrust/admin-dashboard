@@ -13,6 +13,8 @@ export const StyledNavItem = styled((props) => <ListItemButton disableGutters {.
   borderRadius: theme.shape.borderRadius,
   marginLeft: 5,
   padding: "0 10px 0 10px",
+  // borderBottomWidth: "2px !important",
+  // borderBottomColor: "black !important",
 }));
 
 export const StyledNavItemIcon = styled(ListItemIcon)({
