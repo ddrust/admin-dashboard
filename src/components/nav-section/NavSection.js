@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
 import { NavLink as RouterLink } from 'react-router-dom';
 // @mui
@@ -59,8 +61,8 @@ function NavItem({ item }) {
         },
       }}
     >
-      <Home color="secondary" fontSize="medium" />
-      {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
+      {/* <Home color="secondary" fontSize="medium" /> */}
+      <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
       {/* <Iconify icon={icon} color="primary" sx={{ width: 15, height: 15, mr: 0.5 }} /> */}
       
       <ListItemText disableTypography primary={title} />
