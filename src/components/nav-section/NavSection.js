@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { NavLink as RouterLink } from 'react-router-dom';
 // @mui
 import { Box, List, ListItemText, Toolbar } from '@mui/material';
+import {Home} from '@mui/icons-material';
 import Iconify from '../iconify';
 import Logo from '../logo';
 //
@@ -58,12 +59,13 @@ function NavItem({ item }) {
         },
       }}
     >
-      <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
-      {/* <Iconify icon={icon} sx={{ width: 35, height: 35, mr: 0.5 }} /> */}
-
+      <Home color="secondary" fontSize="medium" />
+      {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
+      {/* <Iconify icon={icon} color="primary" sx={{ width: 15, height: 15, mr: 0.5 }} /> */}
+      
       <ListItemText disableTypography primary={title} />
 
-      {/* {info && info} */}
+      {info && info}
     </StyledNavItem>
   );
 }
